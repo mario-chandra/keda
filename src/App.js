@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Radio from "./Component/Radio";
+import Input from "./Component/Input";
+import Date from "./Component/Date";
+import { Container, FlexContainer } from "./Style/StyledComponent";
+
+const input = <Input />;
+const date = <Date />;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <div>
+        <p>Name</p>
+        <FlexContainer>
+          <Radio id="name" name="name" label="Radio A" />
+          <Radio id="name" name="name" label="Radio B" />
+          <Radio id="name" name="name" label="Radio C" />
+        </FlexContainer>
+      </div>
+
+      <div>
+        <p>Subcomponents!</p>
+        <Radio label={input} name="1" />
+        <Radio label="Representative Form" name="1" />
+      </div>
+
+      <div>
+        <p>Subcomponents!</p>
+        <div style={{ display: "flex" }}>
+          <Radio label={date} name="helo" />
+        </div>
+
+        <Radio label="Representative Form" name="1" />
+      </div>
+    </Container>
   );
 }
 
