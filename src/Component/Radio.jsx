@@ -7,7 +7,7 @@ const Radio = (props) => {
     input.current.focus();
   };
   return (
-    <div>
+    <>
       <input type="radio" id={props.id} name={props.name} onClick={onClick} />
 
       <div style={{ display: "inline" }}>
@@ -19,7 +19,7 @@ const Radio = (props) => {
           {props.label}
         </label>
       </div>
-    </div>
+    </>
   );
 };
 

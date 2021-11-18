@@ -5,11 +5,11 @@ const Input = () => {
     <>
       <input
         style={{ height: "35px" }}
-        id="test"
+        id="hey"
         type="text"
         placeholder="Hey!"
       />
-      <label style={{ display: "block", fontSize: "0.7em" }} htmlFor="test">
+      <label style={{ display: "block", fontSize: "0.7em" }} htmlFor="hey">
         inner component
       </label>
     </>
