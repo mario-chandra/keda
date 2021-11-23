@@ -10,3 +10,13 @@ export const Container = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
 `;
+
+export const InputComp = styled.input`
+  height: 35px
+
+`
+
+export const LabelInput = styled.label`
+  display: block;
+  font-size: 0.7em
+`

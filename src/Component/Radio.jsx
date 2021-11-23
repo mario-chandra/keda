@@ -1,25 +1,25 @@
 import React, { useRef } from "react";
 
-const Radio = (props) => {
+const Radio = ({id,name,label}) => {
   const input = useRef(null);
 
   const onClick = () => {
     input.current.focus();
   };
-  return (
-    <>
-      <input type="radio" id={props.id} name={props.name} onClick={onClick} />
 
-      <div style={{ display: "inline" }}>
+  return (
+    <div style={{ display: "flex",marginBottom:"20px" }}>
+      <input type="radio" id={id} name={name}  onClick={onClick} />
+
         <label
-          style={{ display: "inline-table", margin: "0px 10px 10px 10px" }}
+          style={{ display: "inline-table", margin: "0px 10px 0px 10px" }}
           ref={input}
-          htmlFor={props.id}
+          htmlFor={id}
         >
-          {props.label}
+          {label}
         </label>
-      </div>
-    </>
+      
+    </div>
   );
 };
 

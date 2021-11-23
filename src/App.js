@@ -7,9 +7,9 @@ import { Container, FlexContainer } from "./Style/StyledComponent";
 const input = <Input />;
 const date = <Date />;
 const subcom1 = <SubCom1 />;
+const letter = ["a", "b", "c"];
 
 function App() {
-  const letter = ["a", "b", "c"];
   return (
     <Container>
       {/* label */}
@@ -17,11 +17,7 @@ function App() {
         <p>Name</p>
         <FlexContainer>
           {letter.map((e) => {
-            return (
-              <div>
-                <Radio id="name" name="name" label={`radio ${e}`} />
-              </div>
-            );
+            return <Radio key={e} id={e} name="name" label={`radio ${e}`} />;
           })}
         </FlexContainer>
       </div>
@@ -29,29 +25,21 @@ function App() {
       {/* Text Input */}
       <div>
         <p>Subcomponents!</p>
-        <div>
-          <Radio label={input} name="1" />
-        </div>
-
+        <Radio label={input} name="1" />
         <Radio label="Representative Form" name="1" />
       </div>
 
       {/* Date Input */}
       <div>
         <p>Subcomponents!</p>
-        <div style={{ display: "flex" }}>
-          <Radio label={date} name="helo" />
-        </div>
-
-        <Radio label="Representative Form" name="1" />
+        <Radio label={date} name="helo" />
+        <Radio label="Representative Form" name="helo" />
       </div>
 
       {/* Other Subcomponent */}
       <div>
         <p>Subcomponents!</p>
-        <div style={{ display: "flex" }}>
-          <Radio label={subcom1} name="helo" />
-        </div>
+        <Radio label={subcom1} name="helo" />
       </div>
     </Container>
   );
