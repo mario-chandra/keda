@@ -16,14 +16,14 @@ export default class Label extends Component {
 
   
   render() {
-    const letter = ["a", "b", "c"];
+    const letter = ["A", "B", "C"];
 
     return (
       <FlexContainer>
         {letter.map((e) => {
             return (
-              <div>
-                <Radio id="name" name="name" label={`radio ${e}`} />
+              <div style={{margin:"0px 10px 5px 0"}}>
+                <Radio id="name" name="name" label={`Radio ${e}`} />
               </div>
             );
           })}

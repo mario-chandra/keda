@@ -11,12 +11,14 @@ function App() {
   
   return (
     <Container>
-
+      <h3>Name</h3>
       <Label/>
       
       
       
       <Input id="1" name="1" />
+      
+
       <Date id="2" name="1"/>
       
       

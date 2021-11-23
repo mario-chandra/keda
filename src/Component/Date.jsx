@@ -23,7 +23,7 @@ export default class Date extends Component {
           label={
             <>
             <LabelInput htmlFor="hey">inner component</LabelInput>
-            <InputComp id="hey" type="text" placeholder="Hey!" />
+            <InputComp id="hey" type="date" placeholder="Hey!" />
             
             </>            
           }/>
