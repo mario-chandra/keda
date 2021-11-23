@@ -1,20 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
+import Radio from "./Radio";
 import { InputComp, LabelInput } from "../Style/StyledComponent";
 
-const Date = () => {
-  return (
-    <>
-      <LabelInput  htmlFor="test">
-        inner component
-      </LabelInput>
-      <InputComp
-        style={{ height: "35px" }}
-        id="test"
-        type="date"
-        placeholder="Hey!"
-      />
-    </>
-  );
-};
+export default class Date extends Component {
+  constructor(props){
+      super(props)
+      this.inputRef = React.createRef()
+  } 
 
-export default Date;
+  clickHandler=()=>{
+      this.inputRef.current.focus()
+  }
+
+  render(){
+    return (
+      <div>
+        <Radio 
+          ref={this.inputRef}
+          id={this.props.id}
+          name={this.props.name}
+          onclick={this.clickHandler}
+          label={
+            <>
+            <LabelInput htmlFor="hey">inner component</LabelInput>
+            <InputComp id="hey" type="date" placeholder="Hey!" />
+            
+            </>            
+          }/>
+       
+      </div>
+    );
+  }
+}

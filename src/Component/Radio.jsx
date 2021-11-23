@@ -1,26 +1,21 @@
-import React, { useRef } from "react";
+import React from "react";
 
-const Radio = ({id,name,label}) => {
-  const input = useRef(null);
-
-  const onClick = () => {
-    input.current.focus();
-  };
+const Radio = React.forwardRef(({ id, name, label, onclick }, ref) => {
+  // const onClick = () => {
+  //   input.current.focus();
+  // };
 
   return (
-    <div style={{ display: "flex",marginBottom:"20px" }}>
-      <input type="radio" id={id} name={name}  onClick={onClick} />
-
-        <label
-          style={{ display: "inline", margin: "0px 10px 0px 10px" }}
-          ref={input}
-          htmlFor={id}
-        >
+    <div style={{display:"flex" ,marginBottom:"20px"}}>
+      <input type="radio" id={id} name={name} onClick={onclick} />
+      {/* <input ref={ref} type="text" /> */}
+      <div>
+        <label style={{ display: "inline-table",marginLeft:"5px" }} ref={ref}>
           {label}
         </label>
-      
+      </div>
     </div>
   );
-};
+});
 
 export default Radio;
