@@ -12,7 +12,7 @@ const Radio = ({id,name,label}) => {
       <input type="radio" id={id} name={name}  onClick={onClick} />
 
         <label
-          style={{ display: "inline-table", margin: "0px 10px 0px 10px" }}
+          style={{ display: "inline", margin: "0px 10px 0px 10px" }}
           ref={input}
           htmlFor={id}
         >

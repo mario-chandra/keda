@@ -30,11 +30,11 @@ function App() {
       </div>
 
       {/* Date Input */}
-      <div>
+      
         <p>Subcomponents!</p>
         <Radio label={date} name="helo" />
         <Radio label="Representative Form" name="helo" />
-      </div>
+      
 
       {/* Other Subcomponent */}
       <div>
